@@ -18,3 +18,7 @@ Commands: -n |	--ethernet                      - Ethernet network interface name
 		--version                       - Display version
           -h |	--help                          - Display this help text
 ```
+Running this application:
+-------------------------
+
+Use sudo for accessing the /sys file system. If you use this in your embedded device then make sure you have root privileges to access the /sys/ filesystem-
