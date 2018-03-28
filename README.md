@@ -13,7 +13,7 @@ Usage of application:
 ---------------------
 ```
 ./a.out: option requires an argument -- 'h'
-Example: ./a.out -n /sys/class/net/<eth0>/statistics/rx_packets: ./a.out progname [options] [arguments...]
+Example: ./a.out -n /sys/class/net/<eth0>/carrier: ./a.out progname [options] [arguments...]
 Commands: -n |	--ethernet                      - Ethernet network interface name
 		--version                       - Display version
           -h |	--help                          - Display this help text
