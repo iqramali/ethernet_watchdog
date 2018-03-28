@@ -11,9 +11,10 @@ Use GCC and its POSIX Compatible not portable in Windows.
 
 Usage of application:
 ---------------------
-
+```
 ./a.out: option requires an argument -- 'h'
 Example: ./a.out -n /sys/class/net/eth0/carrierUsage: ./a.out progname [options] [arguments...]
 Commands: -n |	--ethernet                      - Ethernet network interface name
 		--version                       - Display version
           -h |	--help                          - Display this help text
+```
