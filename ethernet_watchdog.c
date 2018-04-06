@@ -51,7 +51,7 @@ void print_usage(char *progname)
 	printf("Example: ./a.out -n /sys/class/net/<interface>/carrier");
 	printf("Usage: %s progname [options] [arguments...]\n"
 		   "Commands: -n |	--ethernet                      - Ethernet network interface name\n"
-		   "		--version                       - Display version\n"
+		   "          		--version                       - Display version\n"
 		   "          -h |	--help                          - Display this help text\n"
 		   "\n", progname);
 }
@@ -93,7 +93,6 @@ void ethernet_watchdog(char *eth_interface) {
 		case 3 : // high time
 			sleep_interval = High_Time_Sleep;
 			break;
-
 		default: ;
 		}
 		
