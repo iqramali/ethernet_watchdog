@@ -61,16 +61,6 @@ static int version_flag		= 0;
 static int eth_address_flag	= 0;
 char *version="1.0";
 
-static struct option long_options[] = {
-    {"add",    required_argument, 0,  0 },
-    {"delete", required_argument, 0,  0 },
-    {"help",  no_argument, 0,  0 },
-    {"version", no_argument, &version_flag,  1 },
-    {"network",  required_argument, 0, 'c'},
-    {0, 0, 0, 0 }
-};
-
-
 void ethernet_watchdog(char *eth_interface) {
 	int fd = -1;
 	int val;
@@ -137,7 +127,16 @@ int main(int argc, char *argv[]) {
 		print_usage(argv[0]);
 		return 0;
 	}
-
+	
+	static struct option long_options[] = {
+		{"add",    required_argument, 0,  0 },
+		{"delete", required_argument, 0,  0 },
+		{"help",  no_argument, 0,  0 },
+		{"version", no_argument, &version_flag,  1 },
+		{"network",  required_argument, 0, 'c'},
+		{0, 0, 0, 0 }
+	};
+	
 	while (1) {
 		c = getopt_long(argc, argv, "h:n:v",long_options, &option_index);
 		if (c == -1)
